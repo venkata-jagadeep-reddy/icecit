@@ -1,328 +1,228 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Conference
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SIT</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-   body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #1a3b6b;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header {
-            background-color: #1a3b6b;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        .header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .header p {
-            margin: 0;
-            font-size: 14px;
-            text-align: center;
-        }
-        .nav {
-            background-color: #1a3b6b;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-        }
-        .content {
-            background-color: #fff;
-            color: #000;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .content img {
-            width: 150px;
-            height: 200px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        .content h2 {
-            font-size: 32px;
-            margin: 20px 0;
-        }
-        .content h3 {
-            font-size: 24px;
-            color: #1a3b6b;
-            margin: 10px 0;
-        }
-        .content p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .content .date {
-            font-size: 20px;
-            color: #1a3b6b;
-            font-weight: bold;
-        }
-        .container2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .image-container2, .text-container2 {
-            flex: 1;
-            max-width: 500px;
-            margin: 10px;
-        }
-        .image-container2 img {
-            width: 100%;
-            height: 400px; /* Increased height */
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .text-container2 {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .text-container2 h2 {
-            color: #000000;
-            margin-bottom: 10px;
-        }
-        .text-container2 h2 span {
-            color: #007bff;
-        }
-        .text-container2 p {
-            color: #555555;
-            line-height: 1.6;
-        }
-        .text-container2 ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .text-container2 ul li {
-            color: #555555;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .text-container2 ul li i {
-            color: #007bff;
-            margin-right: 10px;
-        }
-        @media (max-width: 768px) {
-            .container2 {
-                flex-direction: column;
-            }
-        }
-        .body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0 10px;
-            color: #000;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin: 0 0 20px;
-            color: #007bff;
-        }
-        .container3 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-            padding: 20px;
-        }
-        .track {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            box-sizing: border-box;
-        }
-        .track h3 {
-            font-size: 1.25em;
-            margin-bottom: 10px;
-            color: #007bff;
-        }
-        .track ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-        .track ul li {
-            font-size: 1em;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        @media (max-width: 768px) {
-            .track {
-                width: 100%;
-            }
-        }
-        .body3 {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container4 {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .h1 {
-            font-size: 2em;
-            color: #000;
-        }
-        .h2 {
-            font-size: 1.5em;
-            color: #007bff;
-        }
-        .timeline {
-            position: relative;
-            margin: 20px 0;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background-color: #007bff;
-        }
-        .timeline-item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 20px 0;
-            position: relative;
-        }
-        .timeline-item:nth-child(even) {
-            justify-content: flex-end;
-        }
-        .timeline-item-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: left;
-        }
-        .timeline-item-content h3 {
-            margin: 0;
-            font-size: 1em;
-            color: #007bff;
-        }
-        .timeline-item-content p {
-            margin: 5px 0 0;
-            font-size: 1em;
-            color: #000;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            background-color: #007bff;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        .timeline-item:nth-child(even)::before {
-            left: auto;
-            right: 50%;
-        }
-        @media (max-width: 768px) {
-            .timeline-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .timeline-item:nth-child(even) {
-                justify-content: flex-start;
-            }
-            .timeline-item-content {
-                width: 100%;
-            }
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #333;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    h1, h2, h3, h4 {
+      color: #1e3c72;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+
+    a {
+      color: #1e3c72;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation Bar */
+    .nav {
+        background-color: #14416c;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+  
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 5px 15px;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+  
+      .nav a:hover {
+        background-color: #007bff;
+      }
+
+    .logo {
+      max-width: 200px; /* Adjust the size as needed */
+      margin: 0 auto 1rem; /* Center the logo and add margin below */
+    }
+    .section {
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.section:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Change background color on hover */
+  transform: scale(1.02); /* Slightly scale up the section */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
   </style>
- </head>
- <body>
-  <div class="header">
-   <img alt="Siddaganga Institute of Technology logo" src="https://placehold.co/50x50"/>
-   <div style="text-align: center;">
-    <h1 style="color:#f8f9fa">
-     Siddaganga Institute of Technology
-    </h1>
-    <p>
-     Tumakuru
-    </p>
-   </div>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="committes.html">Committees</a>
+        <a href="callforpapers.html">Call for Papers</a>
+        <a href="Registration.html">Registration</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+       </div>
+
+   
+
+    <!-- Header -->
+    <header class="section text-center">
+         <!-- Logo -->
+    <div class="text-center">
+        <img src="https://icecit-sit-conference.vercel.app/images/logo.png" alt="Siddaganga Institute of Technology Logo" class="logo">
+      </div>
+      <h1 class="text-4xl font-bold">About Us</h1>
+    </header>
+
+    <!-- About College -->
+    <section id="about-college" class="section">
+      <h2 class="text-3xl font-bold">About the College</h2>
+      <p>
+        Siddaganga Institute of Technology, Tumkur, popularly known as SIT, was established in the year 1963. It was founded and nurtured by His Holiness Dr. Sree Sree Shivakumara Swamiji. The present president of Sree Siddaganga Education Society, Sree Sree Siddalinga Swamiji, is providing directional guidelines.
+
+        SIT is one among 125 institutions run by Sree Siddaganga Education Society. The institute currently has more than 4500 students pursuing their studies across 14 undergraduate programmes and 06 post graduate programmes. The institute has 15 departments recognized as Research Centres by Visvesvaraya Technological University, Belgaum, with 187 Research scholars pursuing Ph.D. programmes.
+        
+        The institute boasts 290 experienced, qualified, and devoted faculty members, with 155 holding Ph.D. degrees from prestigious institutions like IISc Bangalore, IIT Madras, IIT Bombay, IIT Kharagpur, IIT Guwahati, etc. Another 49 faculty members are pursuing Ph.D. programmes at various reputed institutions. Faculty members have completed 60 projects with a grant of Rs.10 Crore, with 33 ongoing projects worth Rs.8 Crore, funded by organizations like DRDO, DST, ISRO, AICTE, and VGST        
+      </p>
+      <!-- Achievements Section -->
+<div id="achievements" class="section">
+    <h2 class="text-3xl font-bold">Achievements</h2>
+    <ul>
+      <li>NAAC Accredited with 'A++' grade</li>
+      <li>Diamond College rating by QS I-Gauge</li>
+      <li>Ranked 100th place in NIRF Engineering Colleges in 2024</li>
+    </ul>
   </div>
-  <div class="nav">
-    <a href="index.html">
-     Home
-    </a>
-    <a href="committes.html">
-     Committees
-    </a>
-    <a href="callforpapers.html">
-     Call for Papers
-    </a>
-    <a href="Registration.html">
-     Registration
-    </a>
-    <a href="contactus.html">
-     Contact Us
-    </a>
-    <a href="aboutus.html">
-     About Us
-    </a>
-   </div>
+  
+  <!-- Academic Programs Section -->
+  <div id="academic-programs" class="section">
+    <h2 class="text-3xl font-bold">Academic Programs</h2>
+    <ul>
+      <li>14 Undergraduate Programs</li>
+      <li>9 Post-Graduate Programs</li>
+      <li>15 Research Centers for Ph.D. and M.Sc. (Engg.)</li>
+    </ul>
+  </div>
+    </section>
+    <div id="campus-facilities" class="section">
+        <h2 class="text-3xl font-bold">Campus Facilities</h2>
+        <h3 class="text-2xl font-semibold">Academic Facilities</h3>
+        <ul>
+          <li>State-of-the-art laboratories</li>
+          <li>Extensive central library</li>
+          <li>Smart classrooms with modern teaching aids</li>
+        </ul>
+        <h3 class="text-2xl font-semibold">Student Amenities</h3>
+        <ul>
+          <li>Separate hostels for boys and girls</li>
+          <li>Well-equipped sports complex</li>
+          <li>24/7 medical facility</li>
+          <li>Campus-wide Wi-Fi</li>
+        </ul>
+    </div>
 
+    <!-- Department of Computer Science & Engineering -->
+    <section id="cse-department" class="section">
+      <h2 class="text-3xl font-bold">Department of Computer Science & Engineering</h2>
+      <p>
+        Established in 1986, the department began with 60 students and now offers four autonomous programs:
+      </p>
+      <ul>
+        <li >B.E. (CSE)</li>
+        <li>B.E. (AI&DS)</li>
+        <li>B.E. CSE (AIML)</li>
+        <li>M.Tech. (CSE)</li>
+      </ul>
+      <p>
+        Recognized as a research center by VTU, the department specializes in areas such as Artificial Intelligence, Machine Learning, Cryptography, Cloud Computing, and more. It boasts multiple NBA accreditations and actively participates in cutting-edge research and development.
+      </p>
+    </section>
 
+    <!-- Department of Information Science & Engineering -->
+    <section id="ise-department" class="section">
+      <h2 class="text-3xl font-bold">Department of Information Science & Engineering</h2>
+      <p>
+        Founded in 1999, the department has grown from 40 students to an intake of 120. It emphasizes experiential learning with state-of-the-art labs and a focus on emerging fields such as Data Science, Artificial Intelligence, and Cybersecurity. Research opportunities for Ph.D. and M.Sc. (Engg.) are available under VTU.
+      </p>
+    </section>
 
- </body>
+    <!-- Department of MCA -->
+    <section id="mca-department" class="section">
+      <h2 class="text-3xl font-bold">Department of Master of Computer Applications (MCA)</h2>
+      <p>
+        Established in 1994, the MCA program bridges theory and practice with a strong focus on software solutions, networking technologies, and multi-technology systems. Known for its strong placement record, the program nurtures industry-ready professionals with a blend of technical and soft skills training.
+      </p>
+    </section>
+
+    <!-- Campus Facilities -->
+    <section id="campus-facilities" class="section">
+      <h2 class="text-3xl font-bold">Campus Facilities</h2>
+      <h3 class="text-2xl font-semibold">Academic Facilities</h3>
+      <ul>
+        <li>State-of-the-art laboratories</li>
+        <li>Extensive central library</li>
+        <li>Smart classrooms with modern teaching aids</li>
+      </ul>
+      <h3 class="text-2xl font-semibold">Student Amenities</h3>
+      <ul>
+        <li>Separate hostels for boys and girls</li>
+        <li>Well-equipped sports complex</li>
+        <li>24/7 medical facility</li>
+        <li>Campus-wide Wi-Fi</li>
+      </ul>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact-info" class="section">
+      <h2 class="text-3xl font-bold">Contact Information</h2>
+      <p>
+        <strong>Address:</strong> Siddaganga Institute of Technology, B.H. Road, Tumakuru - 572103, Karnataka, India.
+      </p>
+      <p><strong>Phone Numbers:</strong></p>
+      <ul>
+        <li>Office: +91-816-2214001</li>
+        <li>Fax: +91-816-2282994</li>
+        <li>Admission Cell: +91-816-2214042</li>
+      </ul>
+      <p><strong>Email:</strong> <a href="mailto:principal@sit.ac.in">principal@sit.ac.in</a></p>
+    </section>
+  </div>
+</body>
 </html>
