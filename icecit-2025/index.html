@@ -1,0 +1,505 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Conference
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a3b6b;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color: #1a3b6b;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        .nav {
+            background-color: #1a3b6b;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .content {
+            background-color: #fff;
+            color: #000;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .content img {
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .content h2 {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        .content h3 {
+            font-size: 24px;
+            color: #1a3b6b;
+            margin: 10px 0;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .content .date {
+            font-size: 20px;
+            color: #1a3b6b;
+            font-weight: bold;
+        }
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .image-container2, .text-container2 {
+            flex: 1;
+            max-width: 500px;
+            margin: 10px;
+        }
+        .image-container2 img {
+            width: 100%;
+            height: 400px; /* Increased height */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text-container2 {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .text-container2 h2 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        .text-container2 h2 span {
+            color: #007bff;
+        }
+        .text-container2 p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .text-container2 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .text-container2 ul li {
+            color: #555555;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .text-container2 ul li i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                flex-direction: column;
+            }
+        }
+        .body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0 10px;
+            color: #000;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin: 0 0 20px;
+            color: #007bff;
+        }
+        .container3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .track {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        .track h3 {
+            font-size: 1.25em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .track ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .track ul li {
+            font-size: 1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .track {
+                width: 100%;
+            }
+        }
+        .body3 {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container4 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .h1 {
+            font-size: 2em;
+            color: #000;
+        }
+        .h2 {
+            font-size: 1.5em;
+            color: #007bff;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #007bff;
+        }
+        .timeline-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+        .timeline-item-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+        .timeline-item-content h3 {
+            margin: 0;
+            font-size: 1em;
+            color: #007bff;
+        }
+        .timeline-item-content p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #000;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background-color: #007bff;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(even)::before {
+            left: auto;
+            right: 50%;
+        }
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+            }
+            .timeline-item-content {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Siddaganga Institute of Technology logo" src="https://placehold.co/50x50"/>
+   <div style="text-align: center;">
+    <h1 style="color:#f8f9fa">
+     Siddaganga Institute of Technology
+    </h1>
+    <p>
+     Tumakuru
+    </p>
+   </div>
+  </div>
+  <div class="nav">
+   <a href="index.html">
+    Home
+   </a>
+   <a href="committes.html">
+    Committees
+   </a>
+   <a href="callforpapers.html">
+    Call for Papers
+   </a>
+   <a href="Registration.html">
+    Registration
+   </a>
+   <a href="contactus.html">
+    Contact Us
+   </a>
+   <a href="aboutus.html">
+    About Us
+   </a>
+  </div>
+  <div class="content">
+   <img alt="Image of a person in orange attire" src="https://placehold.co/150x200"/>
+   <img alt="Siddaganga Institute of Technology emblem" src="https://placehold.co/150x200"/>
+   <img alt="Image of a person in orange attire" src="https://placehold.co/150x200"/>
+   <h2>
+    3
+    <sup>
+     rd
+    </sup>
+    International Conference on
+   </h2>
+   <h3>
+    Emerging Computation and Information Technologies
+   </h3>
+   <p>
+    ICECIT-2025
+   </p>
+   <p>
+    Association of Computer Science &amp; Engineering, Information Science &amp; Engineering, Master of Computer Application
+   </p>
+   <p class="date">
+    14th &amp; 15th November, 2025
+   </p>
+  </div>
+
+  <div class="container2">
+    <div class="image-container2">
+     <img alt="Image of Siddaganga Institute of Technology campus with a building and greenery" src="https://placehold.co/500x300"/>
+    </div>
+    <div class="text-container2">
+     <h2>
+      About Our
+      <span>
+       Institution
+      </span>
+     </h2>
+     <p>
+      Siddaganga Institute of Technology (SIT) in Tumkur, Karnataka, is a prestigious institution established in 1963. Renowned for its excellence in engineering and technology education, it offers undergraduate, postgraduate, and doctoral programs in various disciplines. Affiliated with Visvesvaraya Technological University, SIT is well-known for its state-of-the-art infrastructure, experienced faculty, and vibrant campus life.
+     </p>
+     <ul>
+      <li>
+       <i class="fas fa-check-circle">
+       </i>
+       NAAC Accredited with 'A++' grade
+      </li>
+      <li>
+       <i class="fas fa-check-circle">
+       </i>
+       Diamond College rating by QS I-Gauge
+      </li>
+      <li>
+       <i class="fas fa-check-circle">
+       </i>
+       Ranked 100th place in NIRF Engineering Colleges in 2024
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="body">
+    <h1>Conference</h1>
+    <h2>Tracks</h2>
+    <div class="container3">
+        <div class="track">
+            <h3>Track 1: Gen AI and ML Applications</h3>
+            <ul>
+                <li>Large Language Models and Foundation Models</li>
+                <li>Generative AI for Content Creation</li>
+                <li>Machine Learning in Business Applications</li>
+                <li>AI-Driven Decision Support Systems</li>
+                <li>Computer Vision and Image Generation</li>
+                <li>Natural Language Processing Applications</li>
+                <li>Responsible AI and Ethics</li>
+            </ul>
+        </div>
+        <div class="track">
+            <h3>Track 2: Computing Paradigms</h3>
+            <ul>
+                <li>Cloud Computing Architecture</li>
+                <li>Edge and Fog Computing</li>
+                <li>Quantum Computing Applications</li>
+                <li>Distributed Systems</li>
+                <li>Green Computing Solutions</li>
+                <li>High-Performance Computing</li>
+                <li>Serverless Computing</li>
+            </ul>
+        </div>
+        <div class="track">
+            <h3>Track 3: 5G and Next-Generation Networks</h3>
+            <ul>
+                <li>5G Network Architecture</li>
+                <li>Network Virtualization</li>
+                <li>Software-Defined Networking</li>
+                <li>Network Slicing</li>
+                <li>Mobile Edge Computing</li>
+                <li>6G Vision and Beyond</li>
+                <li>IoT Network Integration</li>
+            </ul>
+        </div>
+        <div class="track">
+            <h3>Track 4: AR/VR Technologies</h3>
+            <ul>
+                <li>Augmented Reality Applications</li>
+                <li>Virtual Reality Systems</li>
+                <li>Mixed Reality Solutions</li>
+                <li>Metaverse Technologies</li>
+                <li>AR/VR in Education</li>
+                <li>Immersive Gaming</li>
+                <li>Extended Reality (XR) Platforms</li>
+            </ul>
+        </div>
+        <div class="track">
+            <h3>Track 5: Security</h3>
+            <ul>
+                <li>Cybersecurity and Threat Detection</li>
+                <li>Blockchain Applications</li>
+                <li>Zero Trust Architecture</li>
+                <li>Cloud Security Solutions</li>
+                <li>IoT Security Frameworks</li>
+                <li>AI-Powered Security Systems</li>
+                <li>Privacy-Preserving Technologies</li>
+            </ul>
+        </div>
+        <div class="track">
+            <h3>Track 6: Cyber Physical Systems</h3>
+            <ul>
+                <li>CPS Architecture and Design</li>
+                <li>Real-time Systems and Control</li>
+                <li>Embedded Systems Integration</li>
+                <li>Industrial Control Systems</li>
+                <li>Smart Manufacturing Systems</li>
+                <li>Sensor Networks and IoT</li>
+                <li>CPS Security and Safety</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="body3">
+    <div class="container4">
+        <h1 class="h1">Important</h1>
+        <h2 class="h2">Dates</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>May 9th, 2021</h3>
+                    <p><i class="fas fa-upload"></i> Submission portal Opens</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>July 30th, 2021</h3>
+                    <p><i class="fas fa-file-alt"></i> Full Paper Submission Deadline</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>September 15th, 2021</h3>
+                    <p><i class="fas fa-envelope"></i> Acceptance/Rejection Notification</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>September 30th, 2021</h3>
+                    <p><i class="fas fa-file-upload"></i> Submission of camera ready paper</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>October 15th, 2021</h3>
+                    <p><i class="fas fa-credit-card"></i> Payment and Registration Deadline</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <h3>November 14th & 15th, 2021</h3>
+                    <p><i class="fas fa-calendar-alt"></i> Conference Dates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </body>
+</html>

@@ -1,0 +1,433 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Conference
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a3b6b;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color: #1a3b6b;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        .nav {
+            background-color: #1a3b6b;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .content {
+            background-color: #fff;
+            color: #000;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .content img {
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .content h2 {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        .content h3 {
+            font-size: 24px;
+            color: #1a3b6b;
+            margin: 10px 0;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .content .date {
+            font-size: 20px;
+            color: #1a3b6b;
+            font-weight: bold;
+        }
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .image-container2, .text-container2 {
+            flex: 1;
+            max-width: 500px;
+            margin: 10px;
+        }
+        .image-container2 img {
+            width: 100%;
+            height: 400px; /* Increased height */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .text-container2 {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .text-container2 h2 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        .text-container2 h2 span {
+            color: #007bff;
+        }
+        .text-container2 p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .text-container2 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .text-container2 ul li {
+            color: #555555;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .text-container2 ul li i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                flex-direction: column;
+            }
+        }
+        .body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0 10px;
+            color: #000;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin: 0 0 20px;
+            color: #007bff;
+        }
+        .container3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .track {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        .track h3 {
+            font-size: 1.25em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .track ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .track ul li {
+            font-size: 1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .track {
+                width: 100%;
+            }
+        }
+        .body3 {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container4 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .h1 {
+            font-size: 2em;
+            color: #000;
+        }
+        .h2 {
+            font-size: 1.5em;
+            color: #007bff;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #007bff;
+        }
+        .timeline-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+        }
+        .timeline-item-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+        .timeline-item-content h3 {
+            margin: 0;
+            font-size: 1em;
+            color: #007bff;
+        }
+        .timeline-item-content p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #000;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background-color: #007bff;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(even)::before {
+            left: auto;
+            right: 50%;
+        }
+        .body3 {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container6 {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(235, 225, 225, 0.1);
+            text-align: center;
+        }
+        .container h1 {
+            color: #2980b9;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .card2 {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+        }
+        .card h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .card2 p {
+            color: #34495e;
+            margin: 5px 0;
+        }
+        .card2 .contact-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .card2 .contact-info i {
+            color: #2980b9;
+            margin-right: 10px;
+        }
+        .cards2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+            }
+            .timeline-item-content {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Siddaganga Institute of Technology logo" src="https://placehold.co/50x50"/>
+   <div style="text-align: center;">
+    <h1 style="color:#f8f9fa">
+     Siddaganga Institute of Technology
+    </h1>
+    <p>
+     Tumakuru
+    </p>
+   </div>
+  </div>
+  <div class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="committes.html">
+     Committees
+    </a>
+    <a href="callforpapers.html">
+     Call for Papers
+    </a>
+    <a href="Registration.html">
+     Registration
+    </a>
+    <a href="contactus.html">
+     Contact Us
+    </a>
+    <a href="aboutus.html">
+     About Us
+    </a>
+   </div>
+   <div class="body3">
+    <div class="container6">
+        <h1>Contact Us</h1>
+        <div class="cards2">
+            <div class="card2">
+                <h2>Dr. N R Sunitha</h2>
+                <p> Professor & Hed</p>
+                <p>Dept. of CSE</p>
+                <p>SIT, Tumkur</p>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <p>nrsunitha@sit.ac.in</p>
+                </div>
+                <div style="align-items: center", class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 9986276851</p>
+                </div>
+            </div>
+        <div class="cards2">
+            <div class="card2">
+                <h2>Dr. Pramod TC</h2>
+                <p>Associate Professor</p>
+                <p>Dept. of CSE</p>
+                <p>SIT, Tumkur</p>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <p>pramodtc@sit.ac.in</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 76676 77891</p>
+                </div>
+            </div>
+            <div class="card2">
+                <h2>Dr. Sumalatha Aradhya</h2>
+                <p>Associate Professor</p>
+                <p>Dept. of CSE</p>
+                <p>SIT, Tumkur</p>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <p>sumaradhya@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 9900609254</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ </body>
+</html>
