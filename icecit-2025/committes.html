@@ -38,7 +38,7 @@ body {
   height: 80px;
   border-radius: 50%;
   margin-bottom: 15px;
-  animation: pulse 2s infinite;
+  animation: pulse 2s infinite; 
 }
 
 .header h1 {
@@ -365,28 +365,39 @@ body {
 
 /* Navigation Bar */
 .nav {
-  background-color: #14416c;
+  background-color: #1a3b6b;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 20px 0; /* Increased padding */
   width: 100%;
-  flex-wrap: wrap;
-  animation: slideIn 1s ease-in-out;
+  opacity: 0;
+  animation: fadeInLinks 2s ease-in 1s forwards;
 }
-
 .nav a {
   color: #fff;
   text-decoration: none;
-  margin: 5px 15px;
-  font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 20px; /* Increased spacing */
+  font-size: 20px; /* Increased font size */
+  opacity: 0;
+  animation: fadeInLink 1s ease-in forwards;
 }
-
-.nav a:hover {
-  background-color: #007bff;
-  transform: scale(1.1);
+.nav a:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.nav a:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav a:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.nav a:nth-child(5) {
+  animation-delay: 1s;
+}
+.nav a:nth-child(6) {
+  animation-delay: 1.2s;
 }
 
 /* Content Section */
@@ -506,116 +517,81 @@ footer p {
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fadeInLinks {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+@keyframes fadeInLink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  80% {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInPopup {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .header h1 {
-    font-size: 20px;
-  }
-
-  .nav a {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-
-  .content h2 {
-    font-size: 24px;
-  }
-
-  .container2 {
-    flex-direction: column;
-  }
-
-  .text-container2 {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 1000px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header h1 {
-    font-size: 18px;
-  }
-
-  .nav a {
-    font-size: 12px;
-    margin: 3px 8px;
-  }
-
-  .content h2 {
-    font-size: 20px;
-  }
-
-  .text-container2 {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 250px;
-  }
+    .nav {
+        flex-wrap: wrap;
+    }
+    .nav a {
+        margin: 10px;
+        font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+    .track-grid {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        padding: 20px; /* Reduced padding for small screens */
+    }
 }
 
   </style>
@@ -646,14 +622,14 @@ footer p {
   <!-- Founder Section -->
   <div class="content" style="width: 100%;">
     <h2>With the Blessings of Our Founder President</h2>
-    <img src="founder-placeholder.jpg" alt="Sree Sree Sree Dr. Shivakumara Swamiji">
+    <img src="images/shivakumaraswamiji.jpg" alt="Sree Sree Sree Dr. Shivakumara Swamiji">
     <p>Sree Sree Sree Dr. Shivakumara Swamiji</p>
   </div>
   <div class="content"style="width: 100%;">
     <h2>Chief Patrons</h2>
     <div class="container2">
       <div class="text-container2">
-        <img src="patron1-placeholder.jpg" alt="Shree siddalinga swamiji">
+        <img src="images/swamiji2.0.jpg" alt="Shree siddalinga swamiji">
         <h3>Shree Siddalinga Swamiji </h3>
         <p>Honorary Secretary</p>
       </div>
@@ -665,17 +641,17 @@ footer p {
     <h2>Our Patrons</h2>
     <div class="container2">
       <div class="text-container2">
-        <img src="patron1-placeholder.jpg" alt="Shri T. K. Nanjundappa">
+        <img src="images/nanju.jpg" alt="Shri T. K. Nanjundappa">
         <h3>Shri T. K. Nanjundappa</h3>
         <p>Honorary Secretary</p>
       </div>
       <div class="text-container2">
-        <img src="patron2-placeholder.jpg" alt="Dr. Shivakumaraiah">
+        <img src="images/shivkumar.jpeg" alt="Dr. Shivakumaraiah">
         <h3>Dr. Shivakumaraiah</h3>
         <p>Joint Secretary</p>
       </div>
       <div class="text-container2">
-        <img src="patron3-placeholder.jpg" alt="Dr. M. N. Channabasappa">
+        <img src="images/chanu.gif" alt="Dr. M. N. Channabasappa">
         <h3>Dr. M. N. Channabasappa</h3>
         <p>Director, SIT, Tumakuru</p>
       </div>
@@ -687,17 +663,17 @@ footer p {
     <h2>General Chairs</h2>
     <div class="container2">
       <div class="text-container2">
-        <img src="chair1-placeholder.jpg" alt="Dr. S. V. Dinesh">
+        <img src="images/dinesh.jpg" alt="Dr. S. V. Dinesh">
         <h3>Dr. S. V. Dinesh</h3>
         <p>Professor, SIT, Tumakuru</p>
       </div>
       <div class="text-container2">
-        <img src="chair2-placeholder.jpg" alt="Dr. Sajjan G Shiva">
+        <img src="images/DrSajjan.jpg" alt="Dr. Sajjan G Shiva">
         <h3>Dr. Sajjan G Shiva</h3>
         <p>University of Memphis, USA</p>
       </div>
       <div class="text-container2">
-        <img src="chair3-placeholder.jpg" alt="Dr. S. S. Iyengar">
+        <img src="images/ssiyengar.jpeg" alt="Dr. S. S. Iyengar">
         <h3>Dr. S. S. Iyengar</h3>
         <p>Florida International University, Miami</p>
       </div>
