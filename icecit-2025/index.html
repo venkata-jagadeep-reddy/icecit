@@ -8,309 +8,325 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <style>
-   body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #1a3b6b;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header {
-            background-color: #1a3b6b;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        .header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .header p {
-            margin: 0;
-            font-size: 14px;
-            text-align: center;
-        }
-        .nav {
-            background-color: #1a3b6b;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-        }
-        .content {
-            background-color: #fff;
-            color: #000;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .content img {
-            width: 150px;
-            height: 200px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        .content h2 {
-            font-size: 32px;
-            margin: 20px 0;
-        }
-        .content h3 {
-            font-size: 24px;
-            color: #1a3b6b;
-            margin: 10px 0;
-        }
-        .content p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .content .date {
-            font-size: 20px;
-            color: #1a3b6b;
-            font-weight: bold;
-        }
-        .container2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .image-container2, .text-container2 {
-            flex: 1;
-            max-width: 500px;
-            margin: 10px;
-        }
-        .image-container2 img {
-            width: 100%;
-            height: 400px; /* Increased height */
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .text-container2 {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .text-container2 h2 {
-            color: #000000;
-            margin-bottom: 10px;
-        }
-        .text-container2 h2 span {
-            color: #007bff;
-        }
-        .text-container2 p {
-            color: #555555;
-            line-height: 1.6;
-        }
-        .text-container2 ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .text-container2 ul li {
-            color: #555555;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .text-container2 ul li i {
-            color: #007bff;
-            margin-right: 10px;
-        }
-        @media (max-width: 768px) {
-            .container2 {
-                flex-direction: column;
-            }
-        }
-        .body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0 10px;
-            color: #000;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin: 0 0 20px;
-            color: #007bff;
-        }
-        .container3 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-            padding: 20px;
-        }
-        .track {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            box-sizing: border-box;
-        }
-        .track h3 {
-            font-size: 1.25em;
-            margin-bottom: 10px;
-            color: #007bff;
-        }
-        .track ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-        .track ul li {
-            font-size: 1em;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        @media (max-width: 768px) {
-            .track {
-                width: 100%;
-            }
-        }
-        .body3 {
-            font-family: 'Roboto', sans-serif;
-            margin: 2%;
-            padding: 0;
-            
-            background-color: #f5f5f5;
-        }
-        .container4 {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
+    .container3 {
+    padding: 20px;
+    background-color: #ffffff; /* Set a background color for the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect for the container */
+    display: flex; /* Use flexbox to center the content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
 
-        }
-        .h1 {
-            font-size: 2em;
-            color: #000;
-        }
-        .h2 {
-            font-size: 1.5em;
-            color: #007bff;
-        }
-        .timeline {
-            position: relative;
-            margin: 20px 0;
-            
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background-color: #007bff;
-        }
-        
-        .timeline-item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 20px 0;
-            position: relative;
-            width: 50%; /* Set width for items */
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0; /* Align left for odd items */
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 50%; /* Align right for even items */
-            justify-content: flex-end; /* Adjust alignment */
-        }
-        
-        .timeline-item-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            width: 90%; /* Adjust content width */
-        }
-        
-        .timeline-item-content h3 {
-            margin: 0;
-            font-size: 1em;
-            color: #007bff;
-        }
-        
-        .timeline-item-content p {
-            margin: 5px 0 0;
-            font-size: 1em;
-            color: #000;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            background-color: #007bff;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .timeline-item:nth-child(odd)::before {
-            left: 100%; /* Position marker on the right for left-aligned items */
-        }
-        
-        .timeline-item:nth-child(even)::before {
-            right: 100%; /* Position marker on the left for right-aligned items */
-        }
-        
-        /* Media Query for responsiveness */
-        @media (max-width: 768px) {
-            .timeline-item {
-                width: 100%;
-                left: 0;
-                justify-content: flex-start;
-            }
-        
-            .timeline-item:nth-child(even) {
-                justify-content: flex-start;
-            }
-        
-            .timeline-item-content {
-                width: 100%;
-            }
-        }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the cards */
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners for cards */
+    padding: 20px; /* Increased padding for better spacing */
+    width: calc(33.333% - 20px); /* Adjust width as needed */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #007bff; /* Change heading color */
+    font-size: 1.5em; /* Increase font size for headings */
+}
+
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    margin: 5px 0;
+    position: relative; /* Position relative for pseudo-elements */
+    padding-left: 20px; /* Add padding for bullet points */
+}
+
+.card ul li::before {
+    content: '✔'; /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    color: #007bff; /* Color for bullet points */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.image-container2 {
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.image-container2 img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #1a3b6b, #122f54);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Other existing styles... */
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #f8f9fa;
+    text-shadow: 2px 2px #007bff;
+}
+
+.header p {
+    margin: 0;
+    font-size: 16px;
+    color: #dfe6f0;
+}
+
+.nav {
+    background: rgba(10, 30, 60, 0.8);
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ffdf00;
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    background: #ffffff;
+    color: #000;
+    max-width: 800px;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.content img {
+    width: 150px;
+    height: 200px;
+    border-radius: 12px;
+    margin: 15px;
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    transition: transform 0.4s ease;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #007bff;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    justify-content: flex-end;
+}
+
+.timeline-item-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 90%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:hover .timeline-item-content {
+    background: linear-gradient(to right, #ffffff, #d1e7ff);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd)::before {
+    left: 100%;
+}
+
+.timeline-item:nth-child(even)::before {
+    right: 100%;
+}
+
+/* Card Hover & Animation Effects */
+.container2, .container3, .container4 {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container2:hover, .container3:hover, .container4:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+
+/* Animated Timeline Hover */
+.timeline-item:hover .timeline-item-content {
+    background: linear-gradient(to right, #ffffff, #d1e7ff);
+}
+
+.body3 {
+    width: 90%; /* Set a width for the body3 */
+    max-width: 1200px; /* Maximum width to prevent it from getting too wide on large screens */
+    margin: 0 auto; /* Center the body3 */
+}
+
+.container4 {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    width: 100%; /* Make it take full width of the body3 */
+    max-width: 1200px; /* Maximum width to prevent it from getting too wide on large screens */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .body3, .container4 {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .body3, .container4 {
+        width: 100%; /* Full width on very small screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
   </style>
  </head>
  <body>
@@ -371,114 +387,114 @@
    </p>
   </div>
 
-  <div class="container2">
+  <div class="body3" style="background-color: #ffffff; border-radius: 10px;">
     <div class="image-container2">
-     <img alt="Image of Siddaganga Institute of Technology campus with a building and greenery" src="images/sit.jpg"/>
+        <img alt="Image of Siddaganga Institute of Technology campus" src="images/sit.jpg"/>
     </div>
-    <div class="text-container2">
-     <h2>
-      About Our
-      <span>
-       Institution
-      </span>
-     </h2>
-     <p>
-      Siddaganga Institute of Technology (SIT) in Tumkur, Karnataka, is a prestigious institution established in 1963. Renowned for its excellence in engineering and technology education, it offers undergraduate, postgraduate, and doctoral programs in various disciplines. Affiliated with Visvesvaraya Technological University, SIT is well-known for its state-of-the-art infrastructure, experienced faculty, and vibrant campus life.
-     </p>
-     <ul>
-      <li>
-       <i class="fas fa-check-circle">
-       </i>
-       NAAC Accredited with 'A++' grade
-      </li>
-      <li>
-       <i class="fas fa-check-circle">
-       </i>
-       Diamond College rating by QS I-Gauge
-      </li>
-      <li>
-       <i class="fas fa-check-circle">
-       </i>
-       Ranked 100th place in NIRF Engineering Colleges in 2024
-      </li>
-     </ul>
+    <div class="text-container2" style="text-align: center;">
+        <h2 style="color: skyblue; ">
+            About Our
+            <span>
+                Institution
+            </span>
+        </h2>
+        <p>
+            Siddaganga Institute of Technology (SIT) in Tumkur, Karnataka, is a prestigious institution established in 1963. Renowned for its excellence in engineering and technology education, it offers undergraduate, postgraduate, and doctoral programs in various disciplines. Affiliated with Visvesvaraya Technological University, SIT is well-known for its state-of-the-art infrastructure, experienced faculty, and vibrant campus life.
+        </p>
+        <ul>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                NAAC Accredited with 'A++' grade
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Diamond College rating by QS I-Gauge
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Ranked 100th place in NIRF Engineering Colleges in 2024
+            </li>
+        </ul>
     </div>
-   </div>
-   <div class="body">
-    <h1>Conference</h1>
-    <h2>Tracks</h2>
+</div>
+   <div class="body3">
+    
     <div class="container3">
-        <div class="track">
-            <h3>Track 1: Gen AI and ML Applications</h3>
-            <ul>
-                <li>Large Language Models and Foundation Models</li>
-                <li>Generative AI for Content Creation</li>
-                <li>Machine Learning in Business Applications</li>
-                <li>AI-Driven Decision Support Systems</li>
-                <li>Computer Vision and Image Generation</li>
-                <li>Natural Language Processing Applications</li>
-                <li>Responsible AI and Ethics</li>
-            </ul>
-        </div>
-        <div class="track">
-            <h3>Track 2: Computing Paradigms</h3>
-            <ul>
-                <li>Cloud Computing Architecture</li>
-                <li>Edge and Fog Computing</li>
-                <li>Quantum Computing Applications</li>
-                <li>Distributed Systems</li>
-                <li>Green Computing Solutions</li>
-                <li>High-Performance Computing</li>
-                <li>Serverless Computing</li>
-            </ul>
-        </div>
-        <div class="track">
-            <h3>Track 3: 5G and Next-Generation Networks</h3>
-            <ul>
-                <li>5G Network Architecture</li>
-                <li>Network Virtualization</li>
-                <li>Software-Defined Networking</li>
-                <li>Network Slicing</li>
-                <li>Mobile Edge Computing</li>
-                <li>6G Vision and Beyond</li>
-                <li>IoT Network Integration</li>
-            </ul>
-        </div>
-        <div class="track">
-            <h3>Track 4: AR/VR Technologies</h3>
-            <ul>
-                <li>Augmented Reality Applications</li>
-                <li>Virtual Reality Systems</li>
-                <li>Mixed Reality Solutions</li>
-                <li>Metaverse Technologies</li>
-                <li>AR/VR in Education</li>
-                <li>Immersive Gaming</li>
-                <li>Extended Reality (XR) Platforms</li>
-            </ul>
-        </div>
-        <div class="track">
-            <h3>Track 5: Security</h3>
-            <ul>
-                <li>Cybersecurity and Threat Detection</li>
-                <li>Blockchain Applications</li>
-                <li>Zero Trust Architecture</li>
-                <li>Cloud Security Solutions</li>
-                <li>IoT Security Frameworks</li>
-                <li>AI-Powered Security Systems</li>
-                <li>Privacy-Preserving Technologies</li>
-            </ul>
-        </div>
-        <div class="track">
-            <h3>Track 6: Cyber Physical Systems</h3>
-            <ul>
-                <li>CPS Architecture and Design</li>
-                <li>Real-time Systems and Control</li>
-                <li>Embedded Systems Integration</li>
-                <li>Industrial Control Systems</li>
-                <li>Smart Manufacturing Systems</li>
-                <li>Sensor Networks and IoT</li>
-                <li>CPS Security and Safety</li>
-            </ul>
+        <h1>Conference</h1>
+        <h2>Tracks</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Track 1: Gen AI and ML Applications</h3>
+                <ul>
+                    <li>Large Language Models and Foundation Models</li>
+                    <li>Generative AI for Content Creation</li>
+                    <li>Machine Learning in Business Applications</li>
+                    <li>AI-Driven Decision Support Systems</li>
+                    <li>Computer Vision and Image Generation</li>
+                    <li>Natural Language Processing Applications</li>
+                    <li>Responsible AI and Ethics</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Track 2: Computing Paradigms</h3>
+                <ul>
+                    <li>Cloud Computing Architecture</li>
+                    <li>Edge and Fog Computing</li>
+                    <li>Quantum Computing Applications</li>
+                    <li>Distributed Systems</li>
+                    <li>Green Computing Solutions</li>
+                    <li>High-Performance Computing</li>
+                    <li>Serverless Computing</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Track 3: 5G and Next-Generation Networks</h3>
+                <ul>
+                    <li>5G Network Architecture</li>
+                    <li>Network Virtualization</li>
+                    <li>Software-Defined Networking</li>
+                    <li>Network Slicing</li>
+                    <li>Mobile Edge Computing</li>
+                    <li>6G Vision and Beyond</li>
+                    <li>IoT Network Integration</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Track 4: AR/VR Technologies</h3>
+                <ul>
+                    <li>Augmented Reality Applications</li>
+                    <li>Virtual Reality Systems</li>
+                    <li>Mixed Reality Solutions</li>
+                    <li>Metaverse Technologies</li>
+                    <li>AR/VR in Education</li>
+                    <li>Immersive Gaming</li>
+                    <li>Extended Reality (XR) Platforms</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Track 5: Security</h3>
+                <ul>
+                    <li>Cybersecurity and Threat Detection</li>
+                    <li>Blockchain Applications</li>
+                    <li>Zero Trust Architecture</li>
+                    <li>Cloud Security Solutions</li>
+                    <li>IoT Security Frameworks</li>
+                    <li>AI-Powered Security Systems</li>
+                    <li>Privacy-Preserving Technologies</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Track 6: Cyber Physical Systems</h3>
+                <ul>
+                    <li>CPS Architecture and Design</li>
+                    <li>Real-time Systems and Control</li>
+                    <li>Embedded Systems Integration</li>
+                    <li>Industrial Control Systems</li>
+                    <li>Smart Manufacturing Systems</li>
+                    <li>Sensor Networks and IoT</li>
+                    <li>CPS Security and Safety</li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

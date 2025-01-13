@@ -1,412 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Conference</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
   <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #1a3b6b;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  /* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a3b6b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+}
 
-    /* Header Section */
-    .header {
-      background-color: #0f2748;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      width: 100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+/* Header Section */
+.header {
+  background-color: #0f2748;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
 
-    .header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
+.header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
 
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
 
-    .header p {
-      margin: 5px 0 0;
-      font-size: 16px;
-      color: #a9d2ff;
-    }
+.header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #a9d2ff;
+}
 
-    /* Navigation Bar */
-    .nav {
-      background-color: #14416c;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      width: 100%;
-      flex-wrap: wrap;
-    }
+/* Navigation Bar */
+.nav {
+  background-color: #14416c;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  animation: slideIn 1s ease-in-out;
+}
 
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 5px 15px;
-      font-size: 16px;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 15px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-    .nav a:hover {
-      background-color: #007bff;
-    }
+.nav a:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
 
-    /* Content Section */
-    .content {
-      background-color: #fff;
-      color: #000;
-      max-width: 90%;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+/* Content Section */
+.content {
+  background-color: #fff;
+  color: #000;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1.5s ease-in;
+}
 
-    .content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin: 10px 0;
-    }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+}
 
-    .content h2 {
-      font-size: 28px;
-      margin: 20px 0;
-      color: #14416c;
-    }
+.content h2 {
+  font-size: 28px;
+  margin: 20px 0;
+  color: #14416c;
+}
 
-    .content p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
+.content p {
+  font-size: 16px;
+  margin: 10px 0;
+}
 
-    /* Container2 Section */
-    .container2 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+/* Container2 Section */
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .text-container2 {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      width: 250px;
-      text-align: center;
-    }
+.text-container2 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: center;
+  animation: bounceIn 1.2s ease-in-out;
+}
 
-    .text-container2 img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
+.text-container2 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
 
-    .text-container2 h3 {
-      color: #007bff;
-      font-size: 18px;
-    }
+.text-container2 h3 {
+  color: #007bff;
+  font-size: 18px;
+}
 
-    .text-container2 p {
-      color: #555555;
-      font-size: 14px;
-    }
+.text-container2 p {
+  color: #555555;
+  font-size: 14px;
+}
 
-    /* Responsive Cards */
-    .card {
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin: 20px auto;
-      width: 90%;
-      max-width: 300vw;
-      text-align: center;
-    }
+/* Responsive Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300vw;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
 
-    .card h2 {
-      margin-top: 0;
-      color: #1a3d7c;
-    }
+.card h2 {
+  margin-top: 0;
+  color: #1a3d7c;
+}
 
-    .list {
-      margin: 20px 0;
-      padding: 0;
-      list-style: none;
-    }
+.list {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
 
-    .list-item {
-      background-color: #f5f9ff;
-      border-left: 4px solid #1a3d7c;
-      margin: 10px 0;
-      padding: 10px 15px;
-      border-radius: 4px;
-      text-align: left;
-      font-size: 14px;
-      color: #333333;
-    }
+.list-item {
+  background-color: #f5f9ff;
+  border-left: 4px solid #1a3d7c;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+  color: #333333;
+}
 
-    /* Footer */
-    footer {
-      background-color: #0f2748;
-      color: #a9d2ff;
-      text-align: center;
-      padding: 20px;
-      width: 100%;
-      position: relative;
-    }
+/* Footer */
+footer {
+  background-color: #0f2748;
+  color: #a9d2ff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
 
-    footer p {
-      margin: 0;
-      font-size: 16px;
-    }
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .header img {
-        width: 60px;
-        height: 60px;
-      }
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-      .header h1 {
-        font-size: 20px;
-      }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      .nav a {
-        font-size: 14px;
-        padding: 8px 10px;
-      }
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
-      .content h2 {
-        font-size: 24px;
-      }
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-      .container2 {
-        flex-direction: column;
-      }
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
-      .text-container2 {
-        width: 100%;
-        max-width: 300px;
-      }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header img {
+    width: 60px;
+    height: 60px;
+  }
 
-      .card {
-        width: 100%;
-        max-width: 1000px;
-      }
-    }
+  .header h1 {
+    font-size: 20px;
+  }
 
-    @media (max-width: 480px) {
-      .header h1 {
-        font-size: 18px;
-      }
+  .nav a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 
-      .nav a {
-        font-size: 12px;
-        margin: 3px 8px;
-      }
+  .content h2 {
+    font-size: 24px;
+  }
 
-      .content h2 {
-        font-size: 20px;
-      }
+  .container2 {
+    flex-direction: column;
+  }
 
-      .text-container2 {
-        width: 100%;
-        max-width: 250px;
-      }
+  .text-container2 {
+    width: 100%;
+    max-width: 300px;
+  }
 
-      .card {
-        width: 100%;
-        max-width: 250px;
-      }
-    }
+  .card {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .nav a {
+    font-size: 12px;
+    margin: 3px 8px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .text-container2 {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
   </style>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Conference</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <style>
+  /* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a3b6b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+/* Header Section */
+.header {
+  background-color: #0f2748;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #a9d2ff;
+}
+
+/* Navigation Bar */
+.nav {
+  background-color: #14416c;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  animation: slideIn 1s ease-in-out;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 15px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+  background-color: #fff;
+  color: #000;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1.5s ease-in;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.content h2 {
+  font-size: 28px;
+  margin: 20px 0;
+  color: #14416c;
+}
+
+.content p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Container2 Section */
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.text-container2 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: center;
+  animation: bounceIn 1.2s ease-in-out;
+}
+
+.text-container2 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.text-container2 h3 {
+  color: #007bff;
+  font-size: 18px;
+}
+
+.text-container2 p {
+  color: #555555;
+  font-size: 14px;
+}
+
+/* Responsive Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300vw;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #1a3d7c;
+}
+
+.list {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  background-color: #f5f9ff;
+  border-left: 4px solid #1a3d7c;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+  color: #333333;
+}
+
+/* Footer */
+footer {
+  background-color: #0f2748;
+  color: #a9d2ff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .container2 {
+    flex-direction: column;
+  }
+
+  .text-container2 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .nav a {
+    font-size: 12px;
+    margin: 3px 8px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .text-container2 {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+  </style>
+</head>
+
 <body>
   <!-- Your existing content -->
   <div class="header">
-    <img alt="Siddaganga Institute of Technology logo" src="https://placehold.co/50x50"/>
+    <img alt="Siddaganga Institute of Technology logo" src="https://placehold.co/50x50" />
     <div style="text-align: center;">
-     <h1 style="color:#f8f9fa">
-      Siddaganga Institute of Technology
-     </h1>
-     <p>
-      Tumakuru
-     </p>
+      <h1 style="color:#f8f9fa">
+        Siddaganga Institute of Technology
+      </h1>
+      <p>
+        Tumakuru
+      </p>
     </div>
-   </div>
-   <div class="nav">
-     <a href="index.html">Home</a>
-     <a href="committes.html">Committees</a>
-     <a href="callforpapers.html">Call for Papers</a>
-     <a href="Registration.html">Registration</a>
-     <a href="contactus.html">Contact Us</a>
-     <a href="aboutus.html">About Us</a>
-    </div>
- 
-   <!-- Founder Section -->
-   <div class="content">
-     <h2>With the Blessings of Our Founder President</h2>
-     <img src="founder-placeholder.jpg" alt="Sree Sree Sree Dr. Shivakumara Swamiji">
-     <p>Sree Sree Sree Dr. Shivakumara Swamiji</p>
-   </div>
- 
-   <!-- Patrons Section -->
-   <div class="content">
-     <h2>Our Patrons</h2>
-     <div class="container2">
-         <div class="text-container2">
-             <img src="patron1-placeholder.jpg" alt="Shree siddalinga swamiji">
-             <h3>Shree Siddalinga Swamiji </h3>
-             <p>Honorary Secretary</p>
-           </div>
-       <div class="text-container2">
-         <img src="patron1-placeholder.jpg" alt="Shri T. K. Nanjundappa">
-         <h3>Shri T. K. Nanjundappa</h3>
-         <p>Honorary Secretary</p>
-       </div>
-       <div class="text-container2">
-         <img src="patron2-placeholder.jpg" alt="Dr. Shivakumaraiah">
-         <h3>Dr. Shivakumaraiah</h3>
-         <p>Joint Secretary</p>
-       </div>
-       <div class="text-container2">
-         <img src="patron3-placeholder.jpg" alt="Dr. M. N. Channabasappa">
-         <h3>Dr. M. N. Channabasappa</h3>
-         <p>Director, SIT, Tumakuru</p>
-       </div>
-     </div>
-   </div>
- 
-   <!-- General Chairs Section -->
-   <div class="content">
-     <h2>General Chairs</h2>
-     <div class="container2">
-       <div class="text-container2">
-         <img src="chair1-placeholder.jpg" alt="Dr. S. V. Dinesh">
-         <h3>Dr. S. V. Dinesh</h3>
-         <p>Professor, SIT, Tumakuru</p>
-       </div>
-       <div class="text-container2">
-         <img src="chair2-placeholder.jpg" alt="Dr. Sajjan G Shiva">
-         <h3>Dr. Sajjan G Shiva</h3>
-         <p>University of Memphis, USA</p>
-       </div>
-       <div class="text-container2">
-         <img src="chair3-placeholder.jpg" alt="Dr. S. S. Iyengar">
-         <h3>Dr. S. S. Iyengar</h3>
-         <p>Florida International University, Miami</p>
-       </div>
-     </div>
-   </div>
-   
-   <div class="content" style="width: 100%;">
-   <div class="card">
-     <h2>Organizing Committee</h2>
-     <ul class="list">
-       <li class="list-item">Dr. N R Sunitha, Professor & Head, Dept. of Computer Science & Engineering</li>
-       <li class="list-item">Dr. R Aparna, Professor & Head, Dept. of Information Science and Engineering</li>
-       <li class="list-item">Dr. B G Premasudha, Professor & Head, Dept. of Master of Computer Applications</li>
-       <li class="list-item">Dr. R Sumathi, Professor, Dept. of Computer Science & Engineering</li>
-       <li class="list-item">Dr. Y S Nijagunayra, Professor, Dept. of Computer Science & Engineering</li>
-       <li class="list-item">Dr. A S Poornima, Professor, Dept. of Computer Science & Engineering</li>
-       <li class="list-item">Dr. H S Jayanna, Professor & Dean (Academic), Dept. of Computer Science & Engineering</li>
-     </ul>
-   </div>
-</div>
- 
-   <!-- Advisory Committee Section -->
-   <div class="content">
-     <h2>Advisory Committee</h2>
-     <div class="container2">
-        <div class="text-container2">
-            <h3>Dr. Mahadeva Prasanna</h3>
-            <div class="description">Director, IIIT Dharwad, Karnataka, India</div>
-          </div>
-          <div class="text-container2">
-            <h3>Dr. Parameshachari B D</h3>
-            <div class="description">SAC Chair, IEEE Bangalore Section</div>
-          </div>
-          <div class="text-container2">
-            <h3>Mr. Gajendra Deshpande</h3>
-            <div class="description">Execom Member, IEEE Bangalore Section</div>
-          </div>
-          <div class="text-container2">
-            <h3>Dr. Shashidhar Patil</h3>
-            <div class="description">Assistant Manager (Research & Development), Seokyoung Systems, Seoul, South Korea</div>
-          </div>
-          <div class="text-container2">
-            <h3>Dr. C B Akki</h3>
-            <div class="description">Registrar, IIIT Dharwad, Karnataka, India</div>
-          </div>
-          <div class="text-container2">
-            <h3>Dr. P. Santhi Thilagam</h3>
-            <div class="description">Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Karn ataka, India</div>
-          </div>
-            <div class="text-container2">
-              <h3>Dr. Shashidhar G Koolagudi</h3>
-              <div class="description">Professor, Dept. of Computer Science and Engineering, NITK Surathkal, Karnataka, India</div>
-            </div>
-            <div class="text-container2">
-              <h3>Dr. C.R.S. Kumar</h3>
-              <div class="description">Professor, DIAT, DRDO, Pune, India</div>
-            </div>
-            <div class="text-container2">
-              <h3>Dr. Mahesha BR Pandit</h3>
-              <div class="description">Chief Technology Officer (CTO), Canarys Automations Limited, Bengaluru, Karnataka, India</div>
-            </div>  
-            <div class="text-container2">
-              <h3>Dr. Alwyn Roshan Pais</h3>
-              <div class="description">Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Karnataka, Surathkal, Karnataka, India</div>
-            </div> 
-            <div class="text-container2">
-              <h3>Dr. Annappa</h3>
-              <div class="description">Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Karnataka, Surathkal, Karnataka, India</div>
-            </div>  
-            <div class="text-container2">
-              <h3>Dr. Madhu Mutyam</h3>
-              <div class="description">Professor, Dept. of Computer Science and Engineering, Indian Institute of Technology, Madras</div>
-            </div> 
-            <div class="text-container2">
-              <h3>Mr. Gurucharan H C</h3>
-              <div class="description">Senior Lead Software Engineer, Apple Inc, San Francisco Bay Area, US</div>
-            </div> 
-            <div class="text-container2">
-              <h3>Dr. Varun M Deshpande</h3>
-              <div class="description">Senior Global Cybersecurity Manager, Schneider Electric</div>
-            </div>     
-       </div>
-       <!-- Add additional advisory committee members similarly -->
-        
-     </div>
+  </div>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="committes.html">Committees</a>
+    <a href="callforpapers.html">Call for Papers</a>
+    <a href="Registration.html">Registration</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="aboutus.html">About Us</a>
+  </div>
 
-     
-   </div>
-   <div class="content">
+  <!-- Founder Section -->
+  <div class="content" style="width: 100%;">
+    <h2>With the Blessings of Our Founder President</h2>
+    <img src="founder-placeholder.jpg" alt="Sree Sree Sree Dr. Shivakumara Swamiji">
+    <p>Sree Sree Sree Dr. Shivakumara Swamiji</p>
+  </div>
+  <div class="content"style="width: 100%;">
+    <h2>Chief Patrons</h2>
+    <div class="container2">
+      <div class="text-container2">
+        <img src="patron1-placeholder.jpg" alt="Shree siddalinga swamiji">
+        <h3>Shree Siddalinga Swamiji </h3>
+        <p>Honorary Secretary</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Patrons Section -->
+  <div class="content"style="width: 100%;">
+    <h2>Our Patrons</h2>
+    <div class="container2">
+      <div class="text-container2">
+        <img src="patron1-placeholder.jpg" alt="Shri T. K. Nanjundappa">
+        <h3>Shri T. K. Nanjundappa</h3>
+        <p>Honorary Secretary</p>
+      </div>
+      <div class="text-container2">
+        <img src="patron2-placeholder.jpg" alt="Dr. Shivakumaraiah">
+        <h3>Dr. Shivakumaraiah</h3>
+        <p>Joint Secretary</p>
+      </div>
+      <div class="text-container2">
+        <img src="patron3-placeholder.jpg" alt="Dr. M. N. Channabasappa">
+        <h3>Dr. M. N. Channabasappa</h3>
+        <p>Director, SIT, Tumakuru</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- General Chairs Section -->
+  <div class="content" style="width: 100%;">
+    <h2>General Chairs</h2>
+    <div class="container2">
+      <div class="text-container2">
+        <img src="chair1-placeholder.jpg" alt="Dr. S. V. Dinesh">
+        <h3>Dr. S. V. Dinesh</h3>
+        <p>Professor, SIT, Tumakuru</p>
+      </div>
+      <div class="text-container2">
+        <img src="chair2-placeholder.jpg" alt="Dr. Sajjan G Shiva">
+        <h3>Dr. Sajjan G Shiva</h3>
+        <p>University of Memphis, USA</p>
+      </div>
+      <div class="text-container2">
+        <img src="chair3-placeholder.jpg" alt="Dr. S. S. Iyengar">
+        <h3>Dr. S. S. Iyengar</h3>
+        <p>Florida International University, Miami</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" style="width: 100%;">
+    <div class="card">
+      <h2>Organizing Committee</h2>
+      <ul class="list">
+        <li class="list-item">Dr. N R Sunitha, Professor & Head, Dept. of Computer Science & Engineering</li>
+        <li class="list-item">Dr. R Aparna, Professor & Head, Dept. of Information Science and Engineering</li>
+        <li class="list-item">Dr. B G Premasudha, Professor & Head, Dept. of Master of Computer Applications</li>
+        <li class="list-item">Dr. R Sumathi, Professor, Dept. of Computer Science & Engineering</li>
+        <li class="list-item">Dr. Y S Nijagunayra, Professor, Dept. of Computer Science & Engineering</li>
+        <li class="list-item">Dr. A S Poornima, Professor, Dept. of Computer Science & Engineering</li>
+        <li class="list-item">Dr. H S Jayanna, Professor & Dean (Academic), Dept. of Computer Science & Engineering</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Advisory Committee Section -->
+  <div class="content">
+    <h2>Advisory Committee</h2>
+    <div class="container2">
+      <div class="text-container2">
+        <h3>Dr. Mahadeva Prasanna</h3>
+        <div class="description">Director, IIIT Dharwad, Karnataka, India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Parameshachari B D</h3>
+        <div class="description">SAC Chair, IEEE Bangalore Section</div>
+      </div>
+      <div class="text-container2">
+        <h3>Mr. Gajendra Deshpande</h3>
+        <div class="description">Execom Member, IEEE Bangalore Section</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Shashidhar Patil</h3>
+        <div class="description">Assistant Manager (Research & Development), Seokyoung Systems, Seoul, South Korea</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. C B Akki</h3>
+        <div class="description">Registrar, IIIT Dharwad, Karnataka, India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. P. Santhi Thilagam</h3>
+        <div class="description">Professor, Dept. of Computer Science and Engineering, National Institute of
+          Technology-Karn ataka, India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Shashidhar G Koolagudi</h3>
+        <div class="description">Professor, Dept. of Computer Science and Engineering, NITK Surathkal, Karnataka, India
+        </div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. C.R.S. Kumar</h3>
+        <div class="description">Professor, DIAT, DRDO, Pune, India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Mahesha BR Pandit</h3>
+        <div class="description">Chief Technology Officer (CTO), Canarys Automations Limited, Bengaluru, Karnataka,
+          India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Alwyn Roshan Pais</h3>
+        <div class="description">Professor, Dept. of Computer Science and Engineering, National Institute of
+          Technology-Karnataka, Surathkal, Karnataka, India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Annappa</h3>
+        <div class="description">Professor, Dept. of Computer Science and Engineering, National Institute of
+          Technology-Karnataka, Surathkal, Karnataka, India</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Madhu Mutyam</h3>
+        <div class="description">Professor, Dept. of Computer Science and Engineering, Indian Institute of Technology,
+          Madras</div>
+      </div>
+      <div class="text-container2">
+        <h3>Mr. Gurucharan H C</h3>
+        <div class="description">Senior Lead Software Engineer, Apple Inc, San Francisco Bay Area, US</div>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Varun M Deshpande</h3>
+        <div class="description">Senior Global Cybersecurity Manager, Schneider Electric</div>
+      </div>
+    </div>
+    <!-- Add additional advisory committee members similarly -->
+
+  </div>
+
+
+  </div>
+  <div class="content">
     <h2>Technical Program Chairs</h2>
     <div class="container2">
       <div class="text-container2">
@@ -465,117 +851,121 @@
       </div>
     </div>
   </div>
-  
+
   <div class="content">
     <h2>Publicity Chairs</h2>
     <div class="container2">
-    <div class="text-container2">
+      <div class="text-container2">
         <h3>Dr. K Bhargavi</h3>
         <p>Associate Professor, Dept. of Computer Science & Engineering</p>
-    </div>
-    <div class="text-container2">
+      </div>
+      <div class="text-container2">
         <h3>Dr. S Sharath Kumar</h3>
         <p>Assistant Professor, Dept. of Information Science & Engineering</p>
-    </div>
-    <div class="text-container2">
+      </div>
+      <div class="text-container2">
         <h3>Dr. R M Savithramma</h3>
         <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
-    </div>
-    <div class="text-container2">
+      </div>
+      <div class="text-container2">
         <h3>Dr. B P Ashwini</h3>
         <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
-    </div>
-    <div class="text-container2">
+      </div>
+      <div class="text-container2">
         <h3>Dr.C Bhanuprakash </h3>
         <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
+      </div>
+      <div class="text-container2">
+        <h3>Mr. Keerthan Kumar T G</h3>
+        <p>Assistant Professor, Dept. of Information Science & Engineering</p>
+      </div>
     </div>
-    <div class="text-container2">
-      <h3>Mr. Keerthan Kumar T G</h3>
-      <p>Assistant Professor, Dept. of Information Science & Engineering</p>
   </div>
-</div>
-</div>
 
-<div class="content">
+  <div class="content">
     <h2>Finanace Chairs</h2>
     <div class="container2">
-        <div class="text-container2">
-      <h3>Dr. Purohit Srinivasacharya</h3>
-      <p>Associate Professor, Dept. of Information Science & Engineering</p>
+      <div class="text-container2">
+        <h3>Dr. Purohit Srinivasacharya</h3>
+        <p>Associate Professor, Dept. of Information Science & Engineering</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Prashanth G K</h3>
+        <p>Assistant Professor, Dept. of Master of Computer Applications</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. K Srinivasa</h3>
+        <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Bharathi PT</h3>
+        <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. T M Kiran Kumar</h3>
+        <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
+      </div>
     </div>
-    <div class="text-container2">
-      <h3>Dr. Prashanth G K</h3>
-      <p>Assistant Professor, Dept. of Master of Computer Applications</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. K Srinivasa</h3>
-      <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Bharathi PT</h3>
-      <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. T M Kiran Kumar</h3>
-      <p>Assistant Professor, Dept. of Computer Science & Engineering</p>
-    </div>
-</div>
   </div>
 
   <div class="content">
     <h2>Technical Commitee</h2>
     <div class="container2">
-    <div class="text-container2">
-      <h3>Dr. Bheemappa Halavar</h3>
-      <p>Assistant Professor, Indian Institute of Information Technology, Sri City, Chittoor, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Pavan Kumar BN</h3>
-      <p>Assistant Professor, Indian Institute of Information Technology, Sri City, Chittoor, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. B Sathish Babu</h3>
-      <p>Professor, RVCE, Bengaluru, Karnataka, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Chidananda Murthy P</h3>
-      <p>Consultant, Celabal Technologies, Bengaluru, Karnataka, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Mahesh Kumar K M</h3>
-      <p>Information Security Engineer, Jio Platforms Ltd., Bengaluru, Karnataka, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. G T Raju</h3>
-      <p>Principal, SJC Institute of Technology, Chickballapur, Bengaluru, Karnataka, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Mr. Sandeep Moonka</h3>
-      <p>Fintech and Payments Partnership Lead, Google Pay India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Jaidhar C D</h3>
-      <p>Professor, Department of Information Technology, National Institute of Technology-Karnataka, Surathkal, Karnataka, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Purushothama B R</h3>
-      <p>Assistant Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Karnataka, Surathkal, Karnataka, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Dr. Akshay Deepak</h3>
-      <p>Associate Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Patna, Patna, India</p>
-    </div>
-    <div class="text-container2">
-      <h3>Mr. Shiva Abhishek</h3>
-      <p>Citibank UK, London</p>
-    </div>
+      <div class="text-container2">
+        <h3>Dr. Bheemappa Halavar</h3>
+        <p>Assistant Professor, Indian Institute of Information Technology, Sri City, Chittoor, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Pavan Kumar BN</h3>
+        <p>Assistant Professor, Indian Institute of Information Technology, Sri City, Chittoor, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. B Sathish Babu</h3>
+        <p>Professor, RVCE, Bengaluru, Karnataka, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Chidananda Murthy P</h3>
+        <p>Consultant, Celabal Technologies, Bengaluru, Karnataka, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Mahesh Kumar K M</h3>
+        <p>Information Security Engineer, Jio Platforms Ltd., Bengaluru, Karnataka, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. G T Raju</h3>
+        <p>Principal, SJC Institute of Technology, Chickballapur, Bengaluru, Karnataka, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Mr. Sandeep Moonka</h3>
+        <p>Fintech and Payments Partnership Lead, Google Pay India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Jaidhar C D</h3>
+        <p>Professor, Department of Information Technology, National Institute of Technology-Karnataka, Surathkal,
+          Karnataka, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Purushothama B R</h3>
+        <p>Assistant Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Karnataka,
+          Surathkal, Karnataka, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Dr. Akshay Deepak</h3>
+        <p>Associate Professor, Dept. of Computer Science and Engineering, National Institute of Technology-Patna,
+          Patna, India</p>
+      </div>
+      <div class="text-container2">
+        <h3>Mr. Shiva Abhishek</h3>
+        <p>Citibank UK, London</p>
+      </div>
 
-</div>
+    </div>
   </div>
- 
-   <!-- Footer -->
-   <footer>
-     <p>&copy; 2025 Siddaganga Institute of Technology, Tumakuru</p>
-   </footer>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Siddaganga Institute of Technology, Tumakuru</p>
+  </footer>
 </body>
+
 </html>
