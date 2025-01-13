@@ -8,286 +8,188 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <style>
-   body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #1a3b6b;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* General Styles */
+        body {
+          margin: 0;
+          font-family: 'Roboto', sans-serif;
+          background-color: #1a3b6b;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
+      
+        /* Header Section */
         .header {
-            background-color: #1a3b6b;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
+          background-color: #0f2748;
+          padding: 20px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+      
         .header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 15px;
+          transition: transform 0.3s ease-in-out;
         }
+      
+        .header img:hover {
+          transform: scale(1.2);
+        }
+      
         .header h1 {
-            margin: 0;
-            font-size: 24px;
+          margin: 0;
+          font-size: 26px;
         }
+      
         .header p {
-            margin: 0;
-            font-size: 14px;
-            text-align: center;
+          margin: 0;
+          font-size: 16px;
+          text-align: center;
+          color: #a9d2ff;
         }
+      
+        /* Navigation Bar */
         .nav {
-            background-color: #1a3b6b;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            width: 100%;
+          background-color: #14416c;
+          display: flex;
+          justify-content: center;
+          padding: 10px 0;
+          width: 100%;
+          position: sticky;
+          top: 0;
+          z-index: 10;
         }
+      
         .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+          color: #fff;
+          text-decoration: none;
+          margin: 0 20px;
+          font-size: 18px;
+          padding: 10px 15px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, color 0.3s ease;
         }
+      
+        .nav a:hover {
+          background-color: #007bff;
+          color: #fff;
+        }
+      
+        /* Content Section */
         .content {
-            background-color: #fff;
-            color: #000;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
+          background-color: #fff;
+          color: #000;
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
+      
+        .content:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+      
         .content img {
-            width: 150px;
-            height: 200px;
-            border-radius: 10px;
-            margin: 10px;
+          width: 150px;
+          height: 200px;
+          border-radius: 10px;
+          margin: 10px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
+      
+        .content img:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+      
         .content h2 {
-            font-size: 32px;
-            margin: 20px 0;
+          font-size: 32px;
+          margin: 20px 0;
+          color: #14416c;
         }
+      
         .content h3 {
-            font-size: 24px;
-            color: #1a3b6b;
-            margin: 10px 0;
+          font-size: 24px;
+          color: #007bff;
+          margin: 10px 0;
         }
+      
         .content p {
-            font-size: 18px;
-            margin: 10px 0;
+          font-size: 18px;
+          margin: 10px 0;
         }
-        .content .date {
-            font-size: 20px;
-            color: #1a3b6b;
-            font-weight: bold;
-        }
+      
+        /* Container2 Section */
         .container2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          gap: 20px;
         }
-        .image-container2, .text-container2 {
-            flex: 1;
-            max-width: 500px;
-            margin: 10px;
-        }
-        .image-container2 img {
-            width: 100%;
-            height: 400px; /* Increased height */
-            object-fit: cover;
-            border-radius: 10px;
-        }
+      
         .text-container2 {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        .text-container2 h2 {
-            color: #000000;
-            margin-bottom: 10px;
+      
+        .text-container2:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        .text-container2 h2 span {
-            color: #007bff;
+      
+        .text-container2 h3 {
+          color: #007bff;
         }
+      
         .text-container2 p {
-            color: #555555;
-            line-height: 1.6;
+          color: #555555;
+          line-height: 1.6;
         }
-        .text-container2 ul {
-            list-style-type: none;
-            padding: 0;
+      
+        .text-container2 img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .text-container2 ul li {
-            color: #555555;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
+      
+        .text-container2 img:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
-        .text-container2 ul li i {
-            color: #007bff;
-            margin-right: 10px;
+      
+        /* Footer */
+        footer {
+          background-color: #0f2748;
+          color: #a9d2ff;
+          text-align: center;
+          padding: 20px;
+          width: 100%;
+          position: relative;
+          bottom: 0;
         }
-        @media (max-width: 768px) {
-            .container2 {
-                flex-direction: column;
-            }
+      
+        footer p {
+          margin: 0;
+          font-size: 16px;
         }
-        .body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0 10px;
-            color: #000;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin: 0 0 20px;
-            color: #007bff;
-        }
-        .container3 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-            padding: 20px;
-        }
-        .track {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            box-sizing: border-box;
-        }
-        .track h3 {
-            font-size: 1.25em;
-            margin-bottom: 10px;
-            color: #007bff;
-        }
-        .track ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-        .track ul li {
-            font-size: 1em;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        @media (max-width: 768px) {
-            .track {
-                width: 100%;
-            }
-        }
-        .body3 {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container4 {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .h1 {
-            font-size: 2em;
-            color: #000;
-        }
-        .h2 {
-            font-size: 1.5em;
-            color: #007bff;
-        }
-        .timeline {
-            position: relative;
-            margin: 20px 0;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background-color: #007bff;
-        }
-        .timeline-item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 20px 0;
-            position: relative;
-        }
-        .timeline-item:nth-child(even) {
-            justify-content: flex-end;
-        }
-        .timeline-item-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: left;
-        }
-        .timeline-item-content h3 {
-            margin: 0;
-            font-size: 1em;
-            color: #007bff;
-        }
-        .timeline-item-content p {
-            margin: 5px 0 0;
-            font-size: 1em;
-            color: #000;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            background-color: #007bff;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        .timeline-item:nth-child(even)::before {
-            left: auto;
-            right: 50%;
-        }
-        @media (max-width: 768px) {
-            .timeline-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .timeline-item:nth-child(even) {
-                justify-content: flex-start;
-            }
-            .timeline-item-content {
-                width: 100%;
-            }
-        }
-  </style>
+      </style>
  </head>
  <body>
   <div class="header">
@@ -321,6 +223,129 @@
      About Us
     </a>
    </div>
+
+   <!-- Header Section -->
+  <div class="header">
+    <img src="placeholder.jpg" alt="Logo">
+    <div>
+      <h1>Conference Committee</h1>
+      <p>Hosted by Siddaganga Institute of Technology, Tumakuru</p>
+    </div>
+  </div>
+
+  <!-- Founder Section -->
+  <div class="content">
+    <h2>With the Blessings of Our Founder President</h2>
+    <img src="founder-placeholder.jpg" alt="Sree Sree Sree Dr. Shivakumara Swamiji">
+    <p>Sree Sree Sree Dr. Shivakumara Swamiji</p>
+  </div>
+
+  <!-- Patrons Section -->
+  <div class="content">
+    <h2>Our Patrons</h2>
+    <div class="container2">
+        <div class="text-container2">
+            <img src="patron1-placeholder.jpg" alt="Shri T. K. Nanjundappa">
+            <h3>Shree Siddalinga Swamiji </h3>
+            <p>Honorary Secretary</p>
+          </div>
+      <div class="text-container2">
+        <img src="patron1-placeholder.jpg" alt="Shri T. K. Nanjundappa">
+        <h3>Shri T. K. Nanjundappa</h3>
+        <p>Honorary Secretary</p>
+      </div>
+      <div class="text-container2">
+        <img src="patron2-placeholder.jpg" alt="Dr. Shivakumaraiah">
+        <h3>Dr. Shivakumaraiah</h3>
+        <p>Joint Secretary</p>
+      </div>
+      <div class="text-container2">
+        <img src="patron3-placeholder.jpg" alt="Dr. M. N. Channabasappa">
+        <h3>Dr. M. N. Channabasappa</h3>
+        <p>Director, SIT, Tumakuru</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- General Chairs Section -->
+  <div class="content">
+    <h2>General Chairs</h2>
+    <div class="container3">
+      <div class="track">
+        <img src="chair1-placeholder.jpg" alt="Dr. S. V. Dinesh">
+        <h3>Dr. S. V. Dinesh</h3>
+        <p>Professor, SIT, Tumakuru</p>
+      </div>
+      <div class="track">
+        <img src="chair2-placeholder.jpg" alt="Dr. Sajjan G Shiva">
+        <h3>Dr. Sajjan G Shiva</h3>
+        <p>University of Memphis, USA</p>
+      </div>
+      <div class="track">
+        <img src="chair3-placeholder.jpg" alt="Dr. S. S. Iyengar">
+        <h3>Dr. S. S. Iyengar</h3>
+        <p>Florida International University, Miami</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="committee-list">
+    <div class="committee-item">
+      <p>Dr. N R Sunitha, Professor & Head, Dept. of Computer Science & Engineering</p>
+    </div>
+    <div class="committee-item">
+      <p>Dr. R Aparna, Professor & Head, Dept. of Information Science and Engineering</p>
+    </div>
+    <div class="committee-item">
+      <p>Dr. B G Premasudha, Professor & Head, Dept. of Master of Computer Applications</p>
+    </div>
+    <div class="committee-item">
+      <p>Dr. R Sumathi, Professor, Dept. of Computer Science & Engineering</p>
+    </div>
+    <div class="committee-item">
+      <p>Dr. Y S Nijagunayra, Professor, Dept. of Computer Science & Engineering</p>
+    </div>
+    <div class="committee-item">
+      <p>Dr. A S Poornima, Professor, Dept. of Computer Science & Engineering</p>
+    </div>
+    <div class="committee-item">
+      <p>Dr. H S Jayanna, Professor & Dean (Academic), Dept. of Computer Science & Engineering</p>
+    </div>
+  </div>
+
+  <!-- Advisory Committee Section -->
+  <div class="content">
+    <h2>Advisory Committee</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-item-content">
+          <img src="advisor1-placeholder.jpg" alt="Dr. N R Sunitha">
+          <h3>Dr. N R Sunitha</h3>
+          <p>Professor & Head, Dept. of CSE</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item-content">
+          <img src="advisor2-placeholder.jpg" alt="Dr. R Aparna">
+          <h3>Dr. R Aparna</h3>
+          <p>Professor & Head, Dept. of ISE</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item-content">
+          <img src="advisor3-placeholder.jpg" alt="Dr. B G Premasudha">
+          <h3>Dr. B G Premasudha</h3>
+          <p>Professor & Head, Dept. of MCA</p>
+        </div>
+      </div>
+      <!-- Add additional advisory committee members similarly -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Siddaganga Institute of Technology, Tumakuru</p>
+  </footer>
 
 
 
