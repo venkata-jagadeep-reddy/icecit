@@ -14,7 +14,42 @@
       min-height: 100vh;
       margin: 0;
     }
-
+.header {
+    background-color: #1a3b6b;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.header p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+.nav {
+    background-color: #1a3b6b;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -26,7 +61,7 @@
       border-radius: 20px;
       padding: 2rem;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      margin-bottom: 2rem;
+      margin: 2rem;
     }
 
     h1, h2, h3, h4 {
@@ -35,7 +70,7 @@
     }
 
     ul {
-      list-style: disc;
+      list-style: none;
       margin-left: 1.5rem;
     }
 
@@ -53,7 +88,7 @@
         background-color: #14416c;
         display: flex;
         justify-content: center;
-        padding: 10px;
+        padding: 1rem;
         width: 100%;
         flex-wrap: wrap;
       }
@@ -81,13 +116,19 @@
 }
 
 .section:hover {
-  background-color: rgba(255, 255, 255, 0.8); /* Change background color on hover */
-  transform: scale(1.02); /* Slightly scale up the section */
+ /* Change background color on hover */
+  transform: scale(1.01); /* Slightly scale up the section */
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
   </style>
 </head>
 <body>
+    <div class="header">
+        <img alt="Siddaganga Institute of Technology logo" src="images/logo.png" class="mb-2"/>
+          <h1 style="color:#f8f9fa">Siddaganga Institute of Technology</h1>
+          <p style="color:#f8f9fa">Tumakuru</p>
+    </div>
+      
   <div class="container">
 
     <!-- Navigation Bar -->
@@ -103,13 +144,13 @@
    
 
     <!-- Header -->
-    <header class="section text-center">
+    <div class="section text-center">
          <!-- Logo -->
     <div class="text-center">
         <img src="https://icecit-sit-conference.vercel.app/images/logo.png" alt="Siddaganga Institute of Technology Logo" class="logo">
       </div>
       <h1 class="text-4xl font-bold">About Us</h1>
-    </header>
+    
 
     <!-- About College -->
     <section id="about-college" class="section">
@@ -118,7 +159,7 @@
         Siddaganga Institute of Technology, Tumkur, popularly known as SIT, was established in the year 1963. It was founded and nurtured by His Holiness Dr. Sree Sree Shivakumara Swamiji. The present president of Sree Siddaganga Education Society, Sree Sree Siddalinga Swamiji, is providing directional guidelines.
 
         SIT is one among 125 institutions run by Sree Siddaganga Education Society. The institute currently has more than 4500 students pursuing their studies across 14 undergraduate programmes and 06 post graduate programmes. The institute has 15 departments recognized as Research Centres by Visvesvaraya Technological University, Belgaum, with 187 Research scholars pursuing Ph.D. programmes.
-        
+
         The institute boasts 290 experienced, qualified, and devoted faculty members, with 155 holding Ph.D. degrees from prestigious institutions like IISc Bangalore, IIT Madras, IIT Bombay, IIT Kharagpur, IIT Guwahati, etc. Another 49 faculty members are pursuing Ph.D. programmes at various reputed institutions. Faculty members have completed 60 projects with a grant of Rs.10 Crore, with 33 ongoing projects worth Rs.8 Crore, funded by organizations like DRDO, DST, ISRO, AICTE, and VGST        
       </p>
       <!-- Achievements Section -->
@@ -224,5 +265,6 @@
       <p><strong>Email:</strong> <a href="mailto:principal@sit.ac.in">principal@sit.ac.in</a></p>
     </section>
   </div>
+</div>
 </body>
 </html>
