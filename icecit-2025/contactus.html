@@ -1,14 +1,12 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Conference
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Conference</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             background-color: #1a3b6b;
@@ -142,7 +140,7 @@
         }
         .body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
+            background-color : #f8f9fa;
             margin: 0;
             padding: 0;
             display: flex;
@@ -248,6 +246,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: left;
+            animation: fadeIn 1.5s ease-in-out; /* Added animation */
         }
         .timeline-item-content h3 {
             margin: 0;
@@ -291,8 +290,9 @@
             padding: 20px;
             width: 80%;
             max-width: 800px;
-            box-shadow: 0 4px 8px rgba(235, 225, 225, 0.1);
+            box-shadow: 0 4px 8px rgba(235, 225, 225,  0.1);
             text-align: center;
+            animation: fadeInUp 1.5s ease-in-out; /* Added animation */
         }
         .container h1 {
             color: #2980b9;
@@ -308,6 +308,7 @@
             flex: 1;
             min-width: 250px;
             text-align: center;
+            animation: fadeIn 1.5s ease-in-out; /* Added animation */
         }
         .card h2 {
             color: #2c3e50;
@@ -346,91 +347,72 @@
                 width: 100%;
             }
         }
-  </style>
- </head>
- <body>
-  <div class="header">
-   <img alt="Siddaganga Institute of Technology logo" src="https://placehold.co/50x50"/>
-   <div style="text-align: center;">
-    <h1 style="color:#f8f9fa">
-     Siddaganga Institute of Technology
-    </h1>
-    <p>
-     Tumakuru
-    </p>
-   </div>
-  </div>
-  <div class="nav">
-    <a href="index.html">
-     Home
-    </a>
-    <a href="committes.html">
-     Committees
-    </a>
-    <a href="callforpapers.html">
-     Call for Papers
-    </a>
-    <a href="Registration.html">
-     Registration
-    </a>
-    <a href="contactus.html">
-     Contact Us
-    </a>
-    <a href="aboutus.html">
-     About Us
-    </a>
-   </div>
-   <div class="body3">
-    <div class="container6">
-        <h1>Contact Us</h1>
-        <div class="cards2">
-            <div class="card2">
-                <h2>Dr. N R Sunitha</h2>
-                <p> Professor & Hed</p>
-                <p>Dept. of CSE</p>
-                <p>SIT, Tumkur</p>
-                <div class="contact-info">
-                    <i class="fas fa-envelope"></i>
-                    <p>nrsunitha@sit.ac.in</p>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img alt="Siddaganga Institute of Technology logo" src="images/logo1.png"/>
+        <div style="text-align: center;">
+            <h1 style="color:#f8f9fa">Siddaganga Institute of Technology</h1>
+            <p>Tumakuru</p>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="committes.html">Committees</a>
+        <a href="callforpapers.html">Call for Papers</a>
+        <a href="Registration.html">Registration</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+    </div>
+    <div class="body3">
+        <div class="container6">
+            <h1>Contact Us</h1>
+            <div class="cards2">
+                <div class="card2">
+                    <h2>Dr. N R Sunitha</h2>
+                    <p>Professor & Head</p>
+                    <p>Dept. of CSE</p>
+                    <p>SIT, Tumkur</p>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>nrsunitha@sit.ac.in</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 9986276851</p>
+                    </div>
                 </div>
-                <div style="align-items: center", class="contact-info">
-                    <i class="fas fa-phone"></i>
-                    <p>+91 9986276851</p>
+                <div class="card2">
+                    <h2>Dr. Pramod TC</h2>
+                    <p>Associate Professor</p>
+                    <p>Dept. of CSE</p>
+                    <p>SIT, Tumkur</p>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>pramodtc@sit.ac.in</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 76676 77891</p>
+                    </div>
                 </div>
-            </div>
-        <div class="cards2">
-            <div class="card2">
-                <h2>Dr. Pramod TC</h2>
-                <p>Associate Professor</p>
-                <p>Dept. of CSE</p>
-                <p>SIT, Tumkur</p>
-                <div class="contact-info">
-                    <i class="fas fa-envelope"></i>
-                    <p>pramodtc@sit.ac.in</p>
-                </div>
-                <div class="contact-info">
-                    <i class="fas fa-phone"></i>
-                    <p>+91 76676 77891</p>
-                </div>
-            </div>
-            <div class="card2">
-                <h2>Dr. Sumalatha Aradhya</h2>
-                <p>Associate Professor</p>
-                <p>Dept. of CSE</p>
-                <p>SIT, Tumkur</p>
-                <div class="contact-info">
-                    <i class="fas fa-envelope"></i>
-                    <p>sumaradhya@gmail.com</p>
-                </div>
-                <div class="contact-info">
-                    <i class="fas fa-phone"></i>
-                    <p>+91 9900609254</p>
+                <div class="card2">
+                    <h2>Dr. Sumalatha Aradhya</h2>
+                    <p>Associate Professor</p>
+                    <p>Dept. of CSE</p>
+                    <p>SIT, Tumkur</p>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>sumaradhya@gmail.com</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 9900609254 </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
- </body>
+</body>
 </html>
